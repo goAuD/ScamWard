@@ -32,7 +32,7 @@ Egyfajta scam, amely e-mailben, hamis weboldalakon keresztül próbálja megszer
 ## III. 🎯 Miért éppen téged?
 
 - Nyilvános e-mail címed van.
-- Vírusos posztod miatt nagy a láthatóságod.
+- Virálissá vált egy posztod, így megnőtt a láthatóságod.
 - Technikai profil → feltételezik, hogy rendszerekhez férsz hozzá.
 - Kevés ismerős → kisebb az ellenőrzési lehetőség.
 - Nincs 2FA vagy jelszókezelő → sebezhetőbb vagy.
