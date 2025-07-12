@@ -74,7 +74,7 @@ Egyfajta scam, amely e-mailben, hamis weboldalakon keresztül próbálja megszer
 
 ## VII. 🧪 Való életből vett eset (anonimizálva)
 
-- Vírusos komment alatt kamu toborzók bukkantak fel
+- Virális komment alatt kamu toborzók bukkantak fel
 - CrowdStrike-re hivatkozó, Gmail-es scammer
 - Átirányított egy másik „tanácsadóra”
 - Kétes profil, elfogadva majd törölve
