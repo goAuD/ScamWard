@@ -75,7 +75,7 @@ Egyfajta scam, amely e-mailben, hamis weboldalakon keresztül próbálja megszer
 ## VII. 🧪 Való életből vett eset (anonimizálva)
 
 - Virális komment alatt kamu toborzók bukkantak fel
-- CrowdStrike-re hivatkozó, Gmail-es scammer
+- CrowdStrike-ra hivatkozó, Gmail-es scammer
 - Átirányított egy másik „tanácsadóra”
 - Kétes profil, elfogadva majd törölve
 - E-mail láthatóság kikapcsolva, jelszavak ellenőrizve (Have I Been Pwned)
