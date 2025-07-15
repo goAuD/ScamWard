@@ -1,4 +1,4 @@
-![DarkLab ASCII](images/ASCII_Darklab.png)
+<img src="images/ASCII_Darklab.png" width="250">
 
 ---
 
@@ -111,4 +111,4 @@ Egyfajta scam, amely e-mailben, hamis weboldalakon keresztül próbálja megszer
 Ez a kisokos valós tapasztalatokon alapuló gyakorlati útmutató.  
 Segít felismerni, elkerülni és kezelni az internetes csalásokat, adathalász támadásokat és social engineering manipulációkat.
 
-![DarkLab Verified](images/Darklab_Logo4.png)
+<img src="images/Darklab_Logo4.png" width="250">

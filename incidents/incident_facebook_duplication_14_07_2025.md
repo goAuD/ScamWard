@@ -1,4 +1,4 @@
-![DarkLab ASCII](images/ASCII_Darklab.png)
+<img src="images/ASCII_Darklab.png" width="250">
 
 ---
 
@@ -74,7 +74,7 @@ No indication of compromise, scripting, or third-party interference.
 
 ---
 
-![DarkLab Verified](images/Darklab_Logo4.png)
+<img src="images/Darklab_Logo4.png" width="250">
 
 ## ✅ Analyst Verification
 

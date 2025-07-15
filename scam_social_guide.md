@@ -1,4 +1,4 @@
-![DarkLab ASCII](images/ASCII_Darklab.png)
+<img src="images/ASCII_Darklab.png" width="250">
 
 ---
 
@@ -115,6 +115,6 @@ It’s designed to help you spot, avoid, and respond to scams, phishing, and soc
 > Awareness = Advantage  
 > Consistency = You
 
-![DarkLab Verified](images/Darklab_Logo4.png)
+<img src="images/Darklab_Logo4.png" width="250">
 
 Stay smart. Stay aware. Stay you.
