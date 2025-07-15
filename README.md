@@ -24,7 +24,7 @@ If you're an IT learner, self-hosting enthusiast, or just someone who wants to s
 
 ## 🧠 Philosophy
 
-We believe that:
+I believe that:
 > **Knowledge = Defense.  
 > Awareness = Advantage.  
 > Consistency = Protection.**
