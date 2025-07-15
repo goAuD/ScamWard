@@ -1,3 +1,6 @@
+![DarkLab ASCII](images/ASCII_Darklab.png)
+
+---
 
 # 🔐 Scam és Social Engineering Kisokos
 
@@ -108,6 +111,4 @@ Egyfajta scam, amely e-mailben, hamis weboldalakon keresztül próbálja megszer
 Ez a kisokos valós tapasztalatokon alapuló gyakorlati útmutató.  
 Segít felismerni, elkerülni és kezelni az internetes csalásokat, adathalász támadásokat és social engineering manipulációkat.
 
-Tudás = Védelem.  
-Tudatosság = Előny.  
-Kitartás = Te.
+![DarkLab Verified](images/Darklab_Logo4.png)

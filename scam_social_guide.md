@@ -1,3 +1,6 @@
+![DarkLab ASCII](images/ASCII_Darklab.png)
+
+---
 
 # 🔐 Scam & Social Engineering Field Guide
 
@@ -111,5 +114,7 @@ It’s designed to help you spot, avoid, and respond to scams, phishing, and soc
 > Knowledge = Defense  
 > Awareness = Advantage  
 > Consistency = You
+
+![DarkLab Verified](images/Darklab_Logo4.png)
 
 Stay smart. Stay aware. Stay you.
