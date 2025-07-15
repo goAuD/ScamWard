@@ -22,20 +22,6 @@ If you're an IT learner, self-hosting enthusiast, or just someone who wants to s
 
 ---
 
-## 📁 Structure
-
-```bash
-CyberAware/
-├── README.md
-├── scam_social_guide.md        # Main content
-├── checklists/
-│   └── quick_threat_checklist.md
-└── cases/
-    └── linkedin_recruiter_scam.md
-```
-
----
-
 ## 🧠 Philosophy
 
 We believe that:
