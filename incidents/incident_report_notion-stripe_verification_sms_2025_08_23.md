@@ -1,3 +1,8 @@
+![Status: Verified](https://img.shields.io/badge/status-verified-brightgreen)
+![Severity: Medium](https://img.shields.io/badge/severity-Medium-yellow)
+![Analyst: Goaud](https://img.shields.io/badge/analyst-goaud-black)
+
+
 # Incident Report – Notion / Stripe Verification SMS
 
 *Status: Resolved*  

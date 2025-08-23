@@ -1,7 +1,3 @@
-<img src="images/ASCII_Darklab.png" width="250">
-
----
-
 ![Status: Verified](https://img.shields.io/badge/status-verified-brightgreen)
 ![Severity: Low](https://img.shields.io/badge/severity-low-blue)
 ![Platform: Facebook-iOS](https://img.shields.io/badge/platform-facebook--ios-purple)
@@ -9,7 +5,8 @@
 
 ---
 
-# 🧠 Incident Report – Facebook Post Duplication  
+# Incident Report – Facebook Post Duplication
+
 **Date:** 14-07-2025  
 **Analyst:** Viktor Halupka  
 **Category:** Platform rendering anomaly / false positive  
@@ -18,7 +15,7 @@
 
 ---
 
-## 🔎 Summary
+## Summary
 
 Multiple duplicate posts were observed across different Facebook groups and feeds within the iOS Facebook app. The duplicated content stacked visually, creating the impression of reposting, automated activity, or a rendering bug.
 
@@ -26,7 +23,7 @@ Importantly: **this behavior did not occur in Facebook Messenger.**
 
 ---
 
-## 🧭 Initial Observations
+## Initial Observations
 
 - Platform affected: **Facebook (iOS app only)**
 - Symptom: **Duplicate posts/comments** visible across several groups
@@ -35,7 +32,7 @@ Importantly: **this behavior did not occur in Facebook Messenger.**
 
 ---
 
-## 🛠️ Investigation Steps
+## Investigation Steps
 
 1. ✅ Checked active sessions under `Facebook > Settings > Security`  
    → Only one valid session (iPhone) was active
@@ -48,16 +45,16 @@ Importantly: **this behavior did not occur in Facebook Messenger.**
 
 ---
 
-## 🧪 Root Cause Analysis
+## Root Cause Analysis
 
 Likely a **rendering/cache synchronization issue in the iOS Facebook app**.  
 No indication of compromise, scripting, or third-party interference.
 
-🧼 Reinstalling the Facebook app resolved the display duplication.
+Reinstalling the Facebook app resolved the display duplication.
 
 ---
 
-## 🧰 Lessons Learned
+## Lessons Learned
 
 - Display anomalies in social media apps may appear malicious but have benign causes
 - Always cross-check behavior across other platforms (web, Android, etc.)
@@ -66,7 +63,7 @@ No indication of compromise, scripting, or third-party interference.
 
 ---
 
-## 🏁 Resolution
+## Resolution
 
 - ✅ Facebook app reinstalled
 - ✅ No duplication observed after reinstall
@@ -74,12 +71,10 @@ No indication of compromise, scripting, or third-party interference.
 
 ---
 
-<img src="images/Darklab_Logo4.png" width="250">
+## Analyst Verification
 
-## ✅ Analyst Verification
-
-📌 Verified by:  
+Verified by:  
 **Viktor Halupka**  
 SOC Analyst (DarkLab Blue Team)  
-🗓️ 14-07-2025  
-🔒 Incident resolved, no further action required
+14-07-2025  
+Incident resolved, no further action required
