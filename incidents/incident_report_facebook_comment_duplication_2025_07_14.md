@@ -75,6 +75,6 @@ Reinstalling the Facebook app resolved the display duplication.
 
 Verified by:  
 **Viktor Halupka**  
-SOC Analyst (DarkLab Blue Team)  
+SOC Analyst (ScamWard Blue Team)  
 14-07-2025  
 Incident resolved, no further action required
