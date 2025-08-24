@@ -1,7 +1,3 @@
-<img src="images/ASCII_Darklab.png" width="250">
-
----
-
 # 🔐 Scam & Social Engineering Field Guide
 
 This document helps you recognize and prevent online scams and social engineering attacks.  
@@ -12,12 +8,15 @@ Especially useful for IT professionals, students, HomeLab builders, and anyone w
 ## I. 🧠 Key Concepts
 
 ### 🎭 Scam
+
 A fraudulent scheme meant to trick you into giving up personal data, money, or access.
 
 ### 🕵️‍♂️ Social Engineering
+
 Psychological manipulation that exploits human behavior and trust to extract sensitive information or gain unauthorized access.
 
 ### 📩 Phishing
+
 A scam technique using fake emails or websites to steal login credentials or private data.
 
 ---
@@ -44,13 +43,13 @@ A scam technique using fake emails or websites to steal login credentials or pri
 
 ## IV. 🚨 Red Flags
 
-| Indicator | Why it's suspicious |
-|-----------|---------------------|
-| Gmail/Outlook sender | Not a corporate domain |
-| Generic message | Not personalized |
-| Urgency or pressure | Emotional manipulation |
+| Indicator              | Why it's suspicious            |
+|-------------------------|--------------------------------|
+| Gmail/Outlook sender    | Not a corporate domain         |
+| Generic message         | Not personalized               |
+| Urgency or pressure     | Emotional manipulation         |
 | Refers you to someone else | Classic social engineering tactic |
-| Missing company or job title | Very vague approach |
+| Missing company or job title | Very vague approach       |
 
 ---
 
@@ -83,13 +82,15 @@ A scam technique using fake emails or websites to steal login credentials or pri
 - Suspicious profile accepted then removed
 - Email visibility turned off, passwords checked (HaveIBeenPwned)
 - Bitwarden active, 2FA setup in progress
-- **No data loss** → caught early
+- **No data loss** → caught early  
+- **Case Closed / Resolved** → incident fully documented and mitigated
 
 ---
 
 ## VIII. ✅ Quick Checklists
 
-### Spotting a Scam:
+### Spotting a Scam
+
 - [ ] Gmail or Outlook address?
 - [ ] Generic message?
 - [ ] No company or job title mentioned?
@@ -98,11 +99,12 @@ A scam technique using fake emails or websites to steal login credentials or pri
 
 **→ 3+ YES = don’t respond or click anything**
 
-### Your Defense Status:
+### Your Defense Status
+
 - [x] Bitwarden in use
 - [x] Email visibility hidden
-- [~] 2FA rollout ongoing
-- [~] Watchtower-style leak monitoring coming soon
+- [x] 2FA rollout completed
+- [x] Leak monitoring active
 
 ---
 
@@ -114,7 +116,5 @@ It’s designed to help you spot, avoid, and respond to scams, phishing, and soc
 > Knowledge = Defense  
 > Awareness = Advantage  
 > Consistency = You
-
-<img src="images/Darklab_Logo4.png" width="250">
 
 Stay smart. Stay aware. Stay you.
