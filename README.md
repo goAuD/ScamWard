@@ -54,6 +54,8 @@ Free to use, adapt, and share - just don't scam with it.
 
 Maintained by [Viktor Halupka](https://www.linkedin.com/in/viktor-halupka-weiz), a passionate IT learner and home-lab builder documenting a personal journey into cybersecurity awareness.
 
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Viktor_Halupka-blue?logo=linkedin)](https://www.linkedin.com/in/viktor-halupka-weiz)
+
 ---
 
 ## Contributions
