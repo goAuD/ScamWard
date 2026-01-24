@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>ScamWard - Scam & Social Engineering Field Guide</title>
-  <meta name="description" content="A practical awareness guide against online scams, phishing, and social engineering attacks.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡</text></svg>">
+  <meta name="description"
+    content="A practical awareness guide against online scams, phishing, and social engineering attacks.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡</text></svg>">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
   <style>
     :root {
@@ -20,14 +23,54 @@
       --notice-tip-border-color: #3fb950;
       --notice-important-border-color: #f0883e;
     }
+
     .cover {
       background: linear-gradient(135deg, #0d1117 0%, #161b22 100%) !important;
     }
+
     .cover h1 {
       color: #58a6ff !important;
     }
+
+    /* Mobile responsive fixes */
+    @media screen and (max-width: 768px) {
+      .markdown-section {
+        padding: 15px;
+        max-width: 100%;
+      }
+
+      .markdown-section table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+
+      .markdown-section pre {
+        overflow-x: auto;
+        padding: 10px;
+      }
+
+      .markdown-section code {
+        word-break: break-word;
+      }
+
+      .markdown-section img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .sidebar {
+        padding-top: 20px;
+      }
+
+      body {
+        font-size: 14px;
+        line-height: 1.6;
+      }
+    }
   </style>
 </head>
+
 <body>
   <div id="app"></div>
   <script>
@@ -38,6 +81,7 @@
       subMaxLevel: 2,
       coverpage: true,
       auto2top: true,
+      relativePath: true,
       search: {
         placeholder: 'Search...',
         noData: 'No results',
@@ -54,4 +98,5 @@
   <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-powershell.min.js"></script>
 </body>
+
 </html>
