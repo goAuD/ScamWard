@@ -1,20 +1,23 @@
-# CrowdSec Windows Install Guide – Cheatsheet
+# CrowdSec Windows Install Guide
+
+![Platform](https://img.shields.io/badge/platform-windows-blue)
+![Tool](https://img.shields.io/badge/tool-crowdsec-orange)
 
 ## 1. Installation
 
-1. Download the latest MSI installer from:  
-   👉 [https://github.com/crowdsecurity/crowdsec/releases](https://github.com/crowdsecurity/crowdsec/releases)  
+1. Download the latest MSI installer from:
+   [https://github.com/crowdsecurity/crowdsec/releases](https://github.com/crowdsecurity/crowdsec/releases)
    (look for `crowdsec-x.y.z-windows-amd64.msi`)
 
 2. Run the installer:
-   - Right-click → **Run as Administrator**  
+   - Right-click → **Run as Administrator**
    - Default settings are fine.
 
 3. Installed paths:
    - Binaries: `C:\Program Files\CrowdSec\`
    - Config + logs: `C:\ProgramData\CrowdSec\`
 
-4. Service:  
+4. Service:
    - Installed as `Crowdsec` (runs under **Local System account** by default).
 
 ## 2. Basic Commands
@@ -84,7 +87,7 @@ Get-Content "C:\ProgramData\CrowdSec\log\crowdsec.log" -Tail 50 -Wait
 
 ## Troubleshooting
 
-### Service won’t start
+### Service won't start
 
 **Ensure it runs as Local System:**
 
@@ -98,7 +101,7 @@ sc.exe config Crowdsec obj= "LocalSystem" password= ""
 
 **Port 8080 already in use**
 
-### CrowdSec’s Local API defaults to 127.0.0.1:8080. Check if it’s free
+### CrowdSec's Local API defaults to 127.0.0.1:8080. Check if it's free
 
 ```powershell
 Get-NetTCPConnection -LocalPort 8080 -ErrorAction SilentlyContinue

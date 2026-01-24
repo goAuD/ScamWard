@@ -34,14 +34,14 @@ Importantly: **this behavior did not occur in Facebook Messenger.**
 
 ## Investigation Steps
 
-1. ✅ Checked active sessions under `Facebook > Settings > Security`  
+1. Checked active sessions under `Facebook > Settings > Security`
    → Only one valid session (iPhone) was active
 
-2. ✅ Verified 2FA was enabled and enforced (Authenticator App)
+2. Verified 2FA was enabled and enforced (Authenticator App)
 
-3. ✅ Confirmed no unfamiliar logins or suspicious devices
+3. Confirmed no unfamiliar logins or suspicious devices
 
-4. 🔁 Switched to Messenger and browser version: **no duplication visible there**
+4. Switched to Messenger and browser version: **no duplication visible there**
 
 ---
 
@@ -65,9 +65,9 @@ Reinstalling the Facebook app resolved the display duplication.
 
 ## Resolution
 
-- ✅ Facebook app reinstalled
-- ✅ No duplication observed after reinstall
-- ✅ No security issues detected
+- Facebook app reinstalled
+- No duplication observed after reinstall
+- No security issues detected
 
 ---
 

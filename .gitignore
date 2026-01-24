@@ -1,9 +1,9 @@
-# Rendszerfájlok
+# System files
 .DS_Store
 Thumbs.db
 desktop.ini
 
-# IDE/editor backupok
+# IDE/editor backups
 *.swp
 *.swo
 *~
@@ -13,35 +13,35 @@ desktop.ini
 # VS Code
 .vscode/
 
-# JetBrains (pl. WebStorm, PyCharm, stb.)
+# JetBrains (WebStorm, PyCharm, etc.)
 .idea/
 
-# Node (ha valaha frontendet építenél hozzá)
+# Node (if frontend added later)
 node_modules/
 npm-debug.log
 
-# Python cache (ha egyszer bejön egy Flask backend 😄)
+# Python cache
 __pycache__/
 *.py[cod]
 *.pyo
 
-# MacOS és Windows rejtett fájlok
+# macOS and Windows hidden files
 ehthumbs.db
 Icon?
 ._*
 
-# Git saját belső merge fájljai
+# Git internal merge files
 *.orig
 
-# Logs (ha generálnál valamit automatikusan)
+# Logs
 *.log
 logs/
 
-# Kézi mentések (pl. Notepad++)
+# Manual backups (e.g. Notepad++)
 *.old
 *.backup
 
-# Archivumok, tömörített fájlok
+# Archives
 *.zip
 *.tar.gz
 *.rar

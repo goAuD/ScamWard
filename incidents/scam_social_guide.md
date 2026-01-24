@@ -1,27 +1,31 @@
-# 🔐 Scam & Social Engineering Field Guide
+# Scam & Social Engineering Field Guide
 
-This document helps you recognize and prevent online scams and social engineering attacks.  
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Status](https://img.shields.io/badge/status-active-success)
+![Focus](https://img.shields.io/badge/focus-awareness-informational)
+
+This document helps you recognize and prevent online scams and social engineering attacks.
 Especially useful for IT professionals, students, HomeLab builders, and anyone who wants to stay safe online.
 
 ---
 
-## I. 🧠 Key Concepts
+## I. Key Concepts
 
-### 🎭 Scam
+### Scam
 
 A fraudulent scheme meant to trick you into giving up personal data, money, or access.
 
-### 🕵️‍♂️ Social Engineering
+### Social Engineering
 
 Psychological manipulation that exploits human behavior and trust to extract sensitive information or gain unauthorized access.
 
-### 📩 Phishing
+### Phishing
 
 A scam technique using fake emails or websites to steal login credentials or private data.
 
 ---
 
-## II. 📬 Common Attack Channels
+## II. Common Attack Channels
 
 - **Email** – Fake recruiters, banking alerts, malicious links or attachments
 - **LinkedIn** – Scam recruiters using generic job offers and Gmail addresses
@@ -31,7 +35,7 @@ A scam technique using fake emails or websites to steal login credentials or pri
 
 ---
 
-## III. 🎯 Why You?
+## III. Why You?
 
 - Your email is publicly visible
 - Viral post increased visibility
@@ -41,7 +45,7 @@ A scam technique using fake emails or websites to steal login credentials or pri
 
 ---
 
-## IV. 🚨 Red Flags
+## IV. Red Flags
 
 | Indicator              | Why it's suspicious            |
 |-------------------------|--------------------------------|
@@ -53,9 +57,9 @@ A scam technique using fake emails or websites to steal login credentials or pri
 
 ---
 
-## V. 🧯 What To Do
+## V. What To Do
 
-- Don’t click, reply, or download anything
+- Don't click, reply, or download anything
 - If you did: **change passwords, run malware scan, log out everywhere**
 - Enable **two-factor authentication (2FA)**
 - Use a password manager (Bitwarden)
@@ -63,7 +67,7 @@ A scam technique using fake emails or websites to steal login credentials or pri
 
 ---
 
-## VI. 🛠️ Defense Basics
+## VI. Defense Basics
 
 - Bitwarden → strong, unique passwords
 - 2FA on Gmail, LinkedIn, GitHub, etc.
@@ -74,20 +78,20 @@ A scam technique using fake emails or websites to steal login credentials or pri
 
 ---
 
-## VII. 🧪 Real-World Example (Anonymized)
+## VII. Real-World Example (Anonymized)
 
 - Viral post attracted fake recruiters
 - One claimed to work with CrowdStrike, used a Gmail address
-- Redirected to another “advisor”
+- Redirected to another "advisor"
 - Suspicious profile accepted then removed
 - Email visibility turned off, passwords checked (HaveIBeenPwned)
 - Bitwarden active, 2FA setup in progress
-- **No data loss** → caught early  
+- **No data loss** → caught early
 - **Case Closed / Resolved** → incident fully documented and mitigated
 
 ---
 
-## VIII. ✅ Quick Checklists
+## VIII. Quick Checklists
 
 ### Spotting a Scam
 
@@ -97,7 +101,7 @@ A scam technique using fake emails or websites to steal login credentials or pri
 - [ ] Urgent or pushy tone?
 - [ ] Redirects to someone else?
 
-**→ 3+ YES = don’t respond or click anything**
+**→ 3+ YES = don't respond or click anything**
 
 ### Your Defense Status
 
@@ -108,13 +112,13 @@ A scam technique using fake emails or websites to steal login credentials or pri
 
 ---
 
-## IX. 🧾 Summary
+## IX. Summary
 
-This guide is based on real-life incidents and personal experience.  
-It’s designed to help you spot, avoid, and respond to scams, phishing, and social engineering attempts.
+This guide is based on real-life incidents and personal experience.
+It's designed to help you spot, avoid, and respond to scams, phishing, and social engineering attempts.
 
-> Knowledge = Defense  
-> Awareness = Advantage  
+> Knowledge = Defense
+> Awareness = Advantage
 > Consistency = You
 
 Stay smart. Stay aware. Stay you.
