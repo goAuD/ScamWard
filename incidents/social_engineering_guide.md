@@ -47,13 +47,13 @@ A scam technique using fake emails or websites to steal login credentials or pri
 
 ## IV. Red Flags
 
-| Indicator              | Why it's suspicious            |
-|-------------------------|--------------------------------|
-| Gmail/Outlook sender    | Not a corporate domain         |
-| Generic message         | Not personalized               |
-| Urgency or pressure     | Emotional manipulation         |
+| Indicator | Why it's suspicious |
+| --- | --- |
+| Gmail/Outlook sender | Not a corporate domain |
+| Generic message | Not personalized |
+| Urgency or pressure | Emotional manipulation |
 | Refers you to someone else | Classic social engineering tactic |
-| Missing company or job title | Very vague approach       |
+| Missing company or job title | Very vague approach |
 
 ---
 
@@ -101,7 +101,10 @@ A scam technique using fake emails or websites to steal login credentials or pri
 - [ ] Urgent or pushy tone?
 - [ ] Redirects to someone else?
 
-**→ 3+ YES = don't respond or click anything**
+### Decision rule
+
+Multiple red flags warrant independent verification. Do not click, download, or
+reply until the sender and request have been verified through a trusted channel.
 
 ### Your Defense Status
 

@@ -3,7 +3,17 @@
 ![Platform](https://img.shields.io/badge/platform-windows-blue)
 ![Tool](https://img.shields.io/badge/tool-crowdsec-orange)
 
+CrowdSec has two separate responsibilities on Windows:
+
+- The **Security Engine** analyzes events and creates decisions.
+- The **Windows Firewall Remediation Component** enforces those decisions by
+  managing Windows Firewall rules.
+
+Installing the Security Engine alone provides detection, not blocking.
+
 ## 1. Installation
+
+### Security Engine
 
 1. Download the latest MSI installer from:
    [https://github.com/crowdsecurity/crowdsec/releases](https://github.com/crowdsecurity/crowdsec/releases)
@@ -19,6 +29,29 @@
 
 4. Service:
    - Installed as `Crowdsec` (runs under **Local System account** by default).
+
+### Windows Firewall Remediation Component
+
+To enforce CrowdSec decisions, install the Windows Firewall Remediation
+Component separately. Use either the current MSI/setup bundle from its
+[release page](https://github.com/crowdsecurity/cs-windows-firewall-bouncer/releases)
+or Chocolatey:
+
+```powershell
+choco install crowdsec-windows-firewall-bouncer
+```
+
+The required .NET runtime can change between releases. Follow the requirement
+shown on the current release page, or use the setup bundle/Chocolatey package
+that installs the matching runtime.
+
+After installation, confirm that the component is registered with the Local
+API:
+
+```powershell
+cd "C:\Program Files\CrowdSec"
+.\cscli.exe bouncers list
+```
 
 ## 2. Basic Commands
 
@@ -77,7 +110,11 @@ Get-Content "C:\ProgramData\CrowdSec\log\crowdsec.log" -Tail 50 -Wait
 ## Quick Notes
 
 - No email/notifier enabled → simpler, less error-prone setup.
-- When CrowdSec bans an IP, it will automatically create a Windows Defender Firewall rule.
+- The Security Engine creates decisions but does not block traffic by itself.
+- When the Windows Firewall Remediation Component is installed and connected,
+  it creates and maintains the corresponding Windows Firewall rules.
+- Remediation component configuration is stored under
+  `C:\ProgramData\CrowdSec\bouncers\`.
 
 ## To quickly verify bans, check
 
@@ -99,7 +136,7 @@ Get-Content "C:\ProgramData\CrowdSec\log\crowdsec.log" -Tail 50 -Wait
 sc.exe config Crowdsec obj= "LocalSystem" password= ""
 ```
 
-**Port 8080 already in use**
+### Port 8080 already in use
 
 ### CrowdSec's Local API defaults to 127.0.0.1:8080. Check if it's free
 

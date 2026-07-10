@@ -7,96 +7,33 @@
   <meta name="description"
     content="A practical awareness guide against online scams, phishing, and social engineering attacks.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; img-src 'self' data: https://img.shields.io; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-src 'none'; worker-src 'none'; upgrade-insecure-requests">
   <link rel="icon"
     href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡</text></svg>">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
-  <style>
-    :root {
-      --theme-color: #58a6ff;
-      --base-background-color: #0d1117;
-      --cover-background-color: #0d1117;
-      --sidebar-background: #161b22;
-      --sidebar-nav-link-color: #c9d1d9;
-      --sidebar-nav-link-color--active: #58a6ff;
-      --link-color: #58a6ff;
-      --code-theme-background: #161b22;
-      --notice-tip-border-color: #3fb950;
-      --notice-important-border-color: #f0883e;
-    }
-
-    .cover {
-      background: linear-gradient(135deg, #0d1117 0%, #161b22 100%) !important;
-    }
-
-    .cover h1 {
-      color: #58a6ff !important;
-    }
-
-    /* Mobile responsive fixes */
-    @media screen and (max-width: 768px) {
-      .markdown-section {
-        padding: 15px;
-        max-width: 100%;
-      }
-
-      .markdown-section table {
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
-      }
-
-      .markdown-section pre {
-        overflow-x: auto;
-        padding: 10px;
-      }
-
-      .markdown-section code {
-        word-break: break-word;
-      }
-
-      .markdown-section img {
-        max-width: 100%;
-        height: auto;
-      }
-
-      .sidebar {
-        padding-top: 20px;
-      }
-
-      body {
-        font-size: 14px;
-        line-height: 1.6;
-      }
-    }
-  </style>
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/docsify-themeable@0.9.0/dist/css/theme-simple-dark.css"
+    integrity="sha384-G+RAlt+LEfAH/nY+DZh3+XIhRboypMI32hiJ9BwnmjF41May5BWQKyrDrEkNdV/i"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/site.css">
 </head>
 
 <body>
   <div id="app"></div>
-  <script>
-    window.$docsify = {
-      name: 'ScamWard',
-      repo: 'goAuD/ScamWard',
-      loadSidebar: true,
-      subMaxLevel: 2,
-      coverpage: true,
-      auto2top: true,
-      relativePath: true,
-      search: {
-        placeholder: 'Search...',
-        noData: 'No results',
-        depth: 3
-      },
-      themeable: {
-        readyTransition: true,
-        responsiveTables: true
-      }
-    }
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-powershell.min.js"></script>
+  <script src="assets/docsify-config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4.13.1/lib/docsify.min.js"
+    integrity="sha384-KaHhgnx/OTLoJ4J33SSJsF4x1pk4I7q3s5ZOfIDHJYl6IG7Oyn2vNDsHiWJe46fD"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4.13.1/lib/plugins/search.min.js"
+    integrity="sha384-LthJPBJ4RGco78kBY+EmKz5rmISZ5vrtAu3+l2ALQ2mrZHOe6Wyf6knyKjeC4cL6"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0.9.0/dist/js/docsify-themeable.min.js"
+    integrity="sha384-ibjVZCUwWPrRrNc9BNkbbJvtYmTh8GYDNQgj+2jQVNDudOFgSQWs+Es6JhdoTIvf"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/components/prism-powershell.min.js"
+    integrity="sha384-xbI9krqyYp4npK9Cn94XyNoSR+TYZKddrk0NUVZ44zZ+OVpKz/LL0U1PB0MjR7Vx"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
