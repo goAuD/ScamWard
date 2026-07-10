@@ -1,0 +1,56 @@
+:root {
+  --theme-color: #58a6ff;
+  --base-background-color: #0d1117;
+  --cover-background-color: #0d1117;
+  --sidebar-background: #161b22;
+  --sidebar-nav-link-color: #c9d1d9;
+  --sidebar-nav-link-color--active: #58a6ff;
+  --link-color: #58a6ff;
+  --code-theme-background: #161b22;
+  --notice-tip-border-color: #3fb950;
+  --notice-important-border-color: #f0883e;
+}
+
+.cover {
+  background: linear-gradient(135deg, #0d1117 0%, #161b22 100%) !important;
+}
+
+.cover h1 {
+  color: #58a6ff !important;
+}
+
+@media screen and (max-width: 768px) {
+  .markdown-section {
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  .markdown-section table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .markdown-section pre {
+    overflow-x: auto;
+    padding: 10px;
+  }
+
+  .markdown-section code {
+    word-break: break-word;
+  }
+
+  .markdown-section img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .sidebar {
+    padding-top: 20px;
+  }
+
+  body {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}

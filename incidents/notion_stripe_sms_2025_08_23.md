@@ -4,7 +4,7 @@
 
 # Incident Report – Notion / Stripe Verification SMS
 
-*Status: Resolved (Stripe) / Pending (Notion)*  
+**Status:** Resolved / case closed
 
 > **Disclaimer:**  
 > This report is published for **research and educational purposes only**.  
@@ -22,12 +22,13 @@ SW-2025-0822-01
 
 goaud [redacted]  
 
-## Date/Time (UTC)
+## Date/Time
 
-Initial report: 2025-08-22, 05:30 approx.  
-Resolved (Stripe): 2025-08-22, 13:00 approx.  
-Notion status: Pending (as of 2025-08-24)
-Closed (Notion): 2025-08-26
+Timezone: CEST (UTC+02:00) unless otherwise stated. Times are approximate and
+retained from contemporaneous notes.
+Initial observation and report: 2025-08-22.
+Stripe explanation received: 2025-08-23.
+Notion case closed: 2025-08-26.
 
 ## Incident Type
 
@@ -43,7 +44,9 @@ Key facts:
 - No Stripe account had been created by the user.  
 - Despite this, SMS messages with Stripe verification codes were received upon Notion login.  
 
-This suggested an unlawful or erroneous processing of personal data, where a phone number was linked to an email address without consent.  
+This raised a privacy concern about an unexpected association between an email
+address, a phone number, and a third-party verification flow. The available
+evidence did not establish which system stored or supplied the association.
 
 ## Systems / Accounts Involved
 
@@ -53,26 +56,25 @@ This suggested an unlawful or erroneous processing of personal data, where a pho
 
 ## Timeline
 
-- **2025-08-22 18:30 CET:** First unsolicited Stripe verification SMS received.  
-- **2025-08-22 18:00 CET:** Issue reported to Stripe via chatbot support (screenshot requested).  
-- **2025-08-22 18:30 CET:** GDPR privacy request submitted to Notion Privacy team.  
-- **2025-08-22 19:25 CET:** Auto-reply from Notion AI support.  
-- **2025-08-22 19:58 CET:** Ticket merged into #4974768 by Notion support.  
-- **2025-08-23 10:20 CET:** Notion login interface updated – verification field removed, SMS messages ceased.  
-- **2025-08-23 14:00 CET:** Stripe confirmed root cause – a **Stripe Link account** was automatically created during a purchase at Elevenlabs.io (2025-08-14). This triggered SMS verifications via Notion’s integration.  
+- **2025-08-22, approximately 18:00–18:30 CEST:** Unsolicited Stripe verification SMS observed and the issue reported to Stripe via chatbot support. Support requested a screenshot.
+- **2025-08-22 18:30 CEST:** GDPR privacy request submitted to Notion Privacy team.
+- **2025-08-22 19:25 CEST:** Auto-reply from Notion AI support.
+- **2025-08-22 19:58 CEST:** Ticket merged into #4974768 by Notion support.
+- **2025-08-23 10:20 CEST:** A change was observed in the Notion login interface: the verification field was no longer shown and the SMS messages ceased. The reason and timing of the product change were not confirmed by Notion.
+- **2025-08-23 14:00 CEST:** Stripe support stated that a **Stripe Link account** had been created during a purchase at Elevenlabs.io (2025-08-14), and attributed the verification messages to that Link account.
 - **2025-08-24:** Notion responded only with generic updates (“specialized team will investigate”), no official explanation yet.
 - **2025-08-26:** Notion Privacy team replied formally: confirmed they had no phone number on file, attributed SMS behavior to Stripe Link, deleted the number from the ticket, and closed the case without root cause acknowledgement.
-- **2025-08-22 → 2025-08-26:** Three smaller Notion updates observed after the incident, indicating silent remediation, though not officially acknowledged.
+- **2025-08-22 → 2025-08-26:** Several Notion product updates were observed after the report. No evidence established that those updates were caused by this incident.
 
 ## Current Status
 
-- **Stripe:** Resolved. Root cause identified and explained transparently. Options provided to log out, opt-out of SMS, or delete Link account.  
-- **Notion:** Notion: Case formally closed. No phone number on file, responsibility attributed fully to Stripe. No official acknowledgement of integration’s role. Silent fix indicators observed.
+- **Stripe:** Resolved from the user's perspective. Stripe identified an existing Link account associated with an earlier transaction and provided options to log out, opt out of SMS, or delete the Link account.
+- **Notion:** Case formally closed. Notion stated that it had no phone number on file and attributed the verification behavior to Stripe Link. It did not provide a separate technical root-cause analysis of the integration flow.
 
 ## Severity Assessment
 
-**Impact:** Medium (possible unlawful processing of personal data).  
-**Likelihood:** Medium (misconfiguration or integration error).  
+**Impact:** Medium (unexpected cross-service identity and verification behavior).
+**Likelihood:** Medium (reproducible account behavior with a vendor-provided explanation that was not independently verified).
 **Overall Severity:** Medium.  
 
 ## Actions Taken
@@ -88,35 +90,45 @@ This suggested an unlawful or erroneous processing of personal data, where a pho
 
 **Stripe:** Confirmed the existence of a Stripe Link account tied to the email address due to an Elevenlabs.io transaction. Explained why SMS codes were sent, and provided mitigation/deletion options. Handled with transparency and diligence.
 
-**Notion:** Confirmed no phone number on file and attributed the behavior to Stripe. Deleted number from ticket for privacy reasons. Login update removed verification field and SMS behavior ceased, but no root cause acknowledged. Case formally closed.
+**Notion:** Confirmed no phone number was stored in the Notion account and
+attributed the behavior to Stripe. Notion removed the number from the support
+ticket for privacy reasons and formally closed the case. A separate technical
+root-cause explanation was not provided.
 
-It is likely that the reporting of this incident contributed directly to the vendors’ rapid actions (Stripe clarification, Notion silent remediation).
+The vendor responses and observed interface change occurred after the report,
+but the available evidence does not establish a causal relationship.
 
 ## Community Reports
 
-Several users on Reddit and other forums reported identical experiences of unsolicited Stripe verification codes linked to Notion. This indicates the incident was not isolated but systemic. Examples:
+A small number of public Reddit discussions describe similar unsolicited Stripe
+Link verification messages. These reports are anecdotal, were not independently
+verified for this investigation, and do not establish a shared root cause:
 
-> "when i go to the settings in Notion, i am getting an ‘xxxxxx is your Link verification code’ SMS verification too… it stopped once i verified it" — schylermanning ([reddit.com](https://www.reddit.com/r/stripe/comments/b0tzot/got_a_random_text_of_a_code_from_stripe/?utm_source=chatgpt.com))  
-> "I received 4 text verification codes and I have no accounts with stripe." — Top_Drive_487 ([reddit.com](https://www.reddit.com/r/stripe/comments/b0tzot/got_a_random_text_of_a_code_from_stripe/?utm_source=chatgpt.com))  
-> "Claude.ai – sent me a code before I even knew I needed one… should definitely try to add a footer…" — Skeptical_Optimist88 ([reddit.com](https://www.reddit.com/r/stripe/comments/b0tzot/got_a_random_text_of_a_code_from_stripe/?utm_source=chatgpt.com))  
-> "These cunts keep spamming me with this shit…" — Leprichaun17 ([reddit.com](https://www.reddit.com/r/stripe/comments/1cx104c/verification_code_texts_to_my_ph_but_i_have_no/?utm_source=chatgpt.com))  
+- [Discussion: unexpected Stripe verification messages](https://www.reddit.com/r/stripe/comments/b0tzot/got_a_random_text_of_a_code_from_stripe/)
+- [Discussion: repeated verification messages](https://www.reddit.com/r/stripe/comments/1cx104c/verification_code_texts_to_my_ph_but_i_have_no/)
 
 ## Lessons Learned
 
-- SaaS platform integrations (e.g. Notion ↔ Stripe) may propagate personal data without user consent if misconfigured.
-- GDPR privacy requests are effective in escalating such issues to vendor privacy/security teams.
+- SaaS integrations can produce unexpected identity or verification flows across
+  service boundaries. The responsible data flow should be verified before
+  drawing conclusions about storage, consent, or fault.
+- Privacy requests can provide a documented escalation path to vendor privacy
+  and security teams.
 - Maintaining a clear incident record strengthens the ability to track vendor responses and provides evidence if escalation to regulators (e.g. Austrian DSB) becomes necessary.
-- Transparency in vendor communication (as shown by Stripe) is crucial. Lack of communication or defensive positioning (as seen with Notion) may undermines user trust.
-- Silent fixes may occur without vendor acknowledgement, making user-side monitoring and documentation important.
+- Clear vendor communication helps users distinguish account behavior, product
+  integration behavior, and confirmed security incidents.
+- Product behavior can change while an investigation is open. Temporal
+  correlation alone does not prove that a report caused the change.
 
 ## Final Notes & Lessons Learned (Legal-Neutral)
 
-- Stripe confirmed the root cause (Stripe Link auto-account via Elevenlabs) and provided clear resolution steps.
+- Stripe identified a Link account associated with an Elevenlabs transaction and provided clear resolution steps.
 - Notion stated that no phone number was stored on their side and attributed the SMS behavior to Stripe’s systems.
-- Following the incident, the login flow changed and multiple product updates were observed, though no official acknowledgement was made.
-- This case highlights the difference in vendor response styles:
-  - Stripe: transparent, solution-oriented, trust-first.
-  - Notion: formal, compliance-focused, risk-minimization.
-- Key takeaway: vendor communications may not always align with observed user experience, which makes incident documentation and timeline tracking essential.
+- Following the incident, the login flow changed and multiple product updates
+  were observed. Their relationship to this report was not confirmed.
+- Stripe supplied an account-level explanation. Notion supplied a privacy and
+  account-data response but no separate integration-level root-cause analysis.
+- Vendor statements and user-observed behavior should be recorded separately so
+  later readers can distinguish evidence from interpretation.
 
 > Status: The case is considered closed.

@@ -46,3 +46,6 @@ logs/
 *.tar.gz
 *.rar
 *.7z
+
+# Ledger
+.sam
