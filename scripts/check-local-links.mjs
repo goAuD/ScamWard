@@ -40,10 +40,19 @@ function isExternalOrAnchor(target) {
   return /^(?:https?:|mailto:|tel:|data:|#)/i.test(target);
 }
 
+// Docsify renders these on every page. With relativePath:true (see
+// assets/docsify-config.js), a non-rooted link in them resolves against the
+// *currently displayed route*, not against this file's own location — so a
+// link like "incidents/foo.md" 404s once you're already on another
+// incidents/ page (path segment doubles). Root-relative links ("/incidents/
+// foo.md") always resolve correctly regardless of the current route.
+const GLOBAL_NAV_FILES = new Set(["_sidebar.md", "_navbar.md"]);
+
 const failures = [];
 const markdownFiles = await collectMarkdownFiles(ROOT);
 
 for (const file of markdownFiles) {
+  const isGlobalNav = GLOBAL_NAV_FILES.has(relative(ROOT, file));
   const content = await readFile(file, "utf8");
   for (const match of content.matchAll(MARKDOWN_LINK)) {
     const rawTarget = match[1];
@@ -55,6 +64,13 @@ for (const file of markdownFiles) {
 
     const target = normalizeTarget(rawTarget);
     if (!target || target === "/") continue;
+
+    if (isGlobalNav && !target.startsWith("/")) {
+      failures.push(
+        `${relative(ROOT, file)}: non-rooted link ${rawTarget} will 404 when navigating from a nested page (relativePath:true) - prefix it with "/"`,
+      );
+      continue;
+    }
 
     const resolvedTarget = target.startsWith("/")
       ? resolve(ROOT, target.slice(1))
