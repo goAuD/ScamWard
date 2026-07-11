@@ -3,7 +3,7 @@
 ![Classification: Suspected False Positive](https://img.shields.io/badge/classification-suspected%20false%20positive-yellow)
 ![Analyst: Goaud](https://img.shields.io/badge/analyst-goaud-black)
 
-# Incident Report – Microsoft Defender Detection in OpenAI Codex Runtime
+# Incident Report - Microsoft Defender Detection in OpenAI Codex Runtime
 
 **Status:** Contained / vendor validation pending  
 **Incident ID:** SW-2026-0710-01  
@@ -225,7 +225,7 @@ alert to recur.
    reported four days earlier in
    [openai/codex#31419](https://github.com/openai/codex/issues/31419)
    (identical helper SHA-256, different Defender detection name:
-   `Trojan:Win32/ClickFix.DE!MTB`) — closed #32343 in favor of #31419
+   `Trojan:Win32/ClickFix.DE!MTB`) - closed #32343 in favor of #31419
    after cross-linking both reports to consolidate the evidence.
 3. Do not submit the complete detected command line because it may contain
    historical prompts or other private context.
