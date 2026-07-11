@@ -12,4 +12,4 @@
 
 - **Links**
   - [GitHub](https://github.com/goAuD/ScamWard)
-  - [License](LICENSE)
+  - [License](/LICENSE)

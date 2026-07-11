@@ -58,6 +58,12 @@ Maintained by [Viktor Halupka](https://www.linkedin.com/in/viktor-halupka-weiz),
 
 ---
 
+## See Also
+
+[TrustMindLab](https://github.com/goAuD/TrustMindLab) - my DevSecOps homelab documentation: pfSense, hardening, monitoring, and infrastructure notes from the same author.
+
+---
+
 ## Contributions
 
 If you have a real case, checklist, or tip to share, open a PR or issue. Let's help others stay one step ahead of digital manipulation.
