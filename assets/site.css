@@ -1,22 +1,222 @@
-:root {
-  --theme-color: #58a6ff;
-  --base-background-color: #0d1117;
-  --cover-background-color: #0d1117;
-  --sidebar-background: #161b22;
-  --sidebar-nav-link-color: #c9d1d9;
-  --sidebar-nav-link-color--active: #58a6ff;
-  --link-color: #58a6ff;
-  --code-theme-background: #161b22;
-  --notice-tip-border-color: #3fb950;
-  --notice-important-border-color: #f0883e;
+/* ==========================================================================
+   ScamWard — "Case File" theme
+   A field guide read like an evidence dossier: warm ink-brown ground,
+   typewriter headings, stamped notices, redaction-bar signature.
+   ========================================================================== */
+
+@font-face {
+  font-family: "Special Elite";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/special-elite-400.woff2") format("woff2");
 }
 
+@font-face {
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/public-sans-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("fonts/public-sans-600.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/public-sans-700.woff2") format("woff2");
+}
+
+:root {
+  /* Warm ink/paper monochrome ramp - drives background, sidebar, code
+     panels, table stripes and borders from two dials instead of a dozen
+     separate overrides. */
+  --mono-hue: 28;
+  --mono-saturation: 20%;
+
+  /* Stamp-red: the "flagged" accent, used for links, active states and
+     the redaction/evidence motifs below. */
+  --theme-hue: 9;
+  --theme-saturation: 58%;
+  --theme-lightness: 45%;
+
+  --base-color: #ded2ba;
+  --base-font-family: "Public Sans", -apple-system, "Segoe UI", sans-serif;
+  --base-line-height: 1.65;
+
+  --heading-color: #efe6d3;
+  --heading-h2-border-color: #55483a;
+
+  --link-text-decoration: none;
+
+  --code-theme-text: #ded2ba;
+  --code-theme-comment: #8a7a5f;
+  --code-theme-keyword: #d9a35f;
+  --code-theme-function: #c96a4d;
+  --code-theme-operator: #b8925a;
+  --code-theme-tag: #c96a4d;
+  --code-theme-variable: #d9a35f;
+  --code-theme-selector: #9caf88;
+  --code-theme-punctuation: #a89a80;
+
+  --sidebar-name-font-weight: normal;
+  --sidebar-nav-strong-font-size: 0.75em;
+
+  --notice-tip-border-color: hsl(140, 22%, 45%);
+  --notice-tip-background: hsl(140, 18%, 15%);
+  --notice-important-border-color: hsl(9, 58%, 45%);
+  --notice-important-background: hsl(9, 30%, 15%);
+
+  --table-row-odd-background: hsl(28, 20%, 15%);
+
+  /* Case-file palette used directly by the custom rules below. */
+  --stamp-red: hsl(9, 58%, 45%);
+  --paper-line: hsl(28, 22%, 32%);
+  --paper-dim: hsl(28, 14%, 62%);
+}
+
+body {
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0.05) 0px,
+      rgba(0, 0, 0, 0.05) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+  background-attachment: fixed;
+}
+
+/* ---- Headings: stamped case-file header treatment -------------------- */
+
+.markdown-section h1,
+.markdown-section h2,
+.sidebar-name {
+  font-family: "Special Elite", "Courier New", monospace;
+  letter-spacing: 0.02em;
+}
+
+.markdown-section h1 {
+  text-transform: uppercase;
+  font-size: 1.7em;
+  letter-spacing: 0.04em;
+  border-bottom: 3px double var(--paper-line);
+  padding-bottom: 0.4em;
+}
+
+.markdown-section h2 {
+  position: relative;
+  padding-left: 0.85em;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  letter-spacing: 0.03em;
+}
+
+.markdown-section h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.15em;
+  bottom: 0.25em;
+  width: 4px;
+  background: var(--stamp-red);
+}
+
+/* ---- Blockquotes: taped evidence notes -------------------------------- */
+
+.markdown-section blockquote {
+  font-family: "Special Elite", "Courier New", monospace;
+  font-size: 0.92em;
+  line-height: 1.6;
+  border-left: none;
+  border-top: 1px dashed var(--paper-line);
+  border-bottom: 1px dashed var(--paper-line);
+  transform: rotate(-0.25deg);
+}
+
+/* ---- Sidebar: folder-tab index ---------------------------------------- */
+
+.sidebar-nav li.active > a {
+  position: relative;
+}
+
+.sidebar-nav li.active > a::before {
+  content: "\2023";
+  color: var(--stamp-red);
+  margin-right: 0.4em;
+}
+
+.sidebar-nav > ul > li {
+  border-bottom: 1px dashed transparent;
+}
+
+.sidebar-nav strong {
+  color: var(--paper-dim);
+}
+
+/* ---- Coverpage: front page of the case file --------------------------- */
+
 .cover {
-  background: linear-gradient(135deg, #0d1117 0%, #161b22 100%) !important;
+  background: linear-gradient(160deg, #241d15 0%, #17130e 100%) !important;
+}
+
+.cover::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.02) 0px,
+    rgba(255, 255, 255, 0.02) 1px,
+    transparent 1px,
+    transparent 4px
+  );
+  pointer-events: none;
 }
 
 .cover h1 {
-  color: #58a6ff !important;
+  font-family: "Special Elite", "Courier New", monospace !important;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #efe6d3 !important;
+  border: 2px solid var(--stamp-red);
+  padding: 0.3em 0.9em;
+  transform: rotate(-1.5deg);
+  display: inline-block;
+}
+
+.cover h1 small {
+  display: block;
+  font-family: "Public Sans", sans-serif;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  font-size: 0.4em;
+  margin-top: 0.4em;
+  color: var(--stamp-red);
+}
+
+.cover blockquote {
+  font-family: "Special Elite", "Courier New", monospace;
+  letter-spacing: 0.02em;
+}
+
+/* ---- Tables: evidence field sheets ------------------------------------ */
+
+.markdown-section table th {
+  font-family: "Special Elite", "Courier New", monospace;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  letter-spacing: 0.05em;
+  color: var(--paper-dim);
 }
 
 @media screen and (max-width: 768px) {
