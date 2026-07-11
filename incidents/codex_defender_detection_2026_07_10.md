@@ -221,7 +221,12 @@ alert to recur.
    threat name, hash, Defender engine/signature versions, and a redacted event
    sample. **Done:** filed as
    [openai/codex#32343](https://github.com/openai/codex/issues/32343)
-   on 2026-07-11.
+   on 2026-07-11. Identified as a duplicate of the same underlying issue
+   reported four days earlier in
+   [openai/codex#31419](https://github.com/openai/codex/issues/31419)
+   (identical helper SHA-256, different Defender detection name:
+   `Trojan:Win32/ClickFix.DE!MTB`) — closed #32343 in favor of #31419
+   after cross-linking both reports to consolidate the evidence.
 3. Do not submit the complete detected command line because it may contain
    historical prompts or other private context.
 4. Update or reinstall the Codex extension only from the official OpenAI
@@ -253,6 +258,8 @@ alert to recur.
 - [Microsoft Defender for Endpoint: Submit files or file hashes](https://learn.microsoft.com/en-us/defender-endpoint/admin-submissions-mde)
 - [OpenAI Codex use cases](https://developers.openai.com/codex/use-cases)
 - [OpenAI Codex issue tracker report: openai/codex#32343](https://github.com/openai/codex/issues/32343)
+  (closed as duplicate of
+  [openai/codex#31419](https://github.com/openai/codex/issues/31419))
 
 ## Final Status
 
