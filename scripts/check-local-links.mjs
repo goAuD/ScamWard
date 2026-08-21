@@ -50,6 +50,12 @@ const GLOBAL_NAV_FILES = new Set(["_sidebar.md", "_navbar.md"]);
 
 const failures = [];
 const markdownFiles = await collectMarkdownFiles(ROOT);
+const sidebarContent = await readFile(join(ROOT, "_sidebar.md"), "utf8");
+const sidebarTargets = new Set(
+  [...sidebarContent.matchAll(MARKDOWN_LINK)].map((match) =>
+    normalizeTarget(match[1]),
+  ),
+);
 
 for (const file of markdownFiles) {
   const isGlobalNav = GLOBAL_NAV_FILES.has(relative(ROOT, file));
@@ -83,11 +89,24 @@ for (const file of markdownFiles) {
   }
 }
 
+const incidentFiles = await collectMarkdownFiles(join(ROOT, "incidents"));
+
+for (const file of incidentFiles) {
+  const repositoryPath = relative(ROOT, file).replaceAll("\\", "/");
+  const sidebarTarget = `/${repositoryPath}`;
+  if (!sidebarTargets.has(sidebarTarget)) {
+    failures.push(
+      `_sidebar.md: missing incidents page link ${sidebarTarget}`,
+    );
+  }
+}
+
 if (failures.length > 0) {
   console.error(failures.join("\n"));
   process.exitCode = 1;
 } else {
   console.log(
-    `Checked ${markdownFiles.length} Markdown files: local links resolve.`,
+    `Checked ${markdownFiles.length} Markdown files: local links resolve; ` +
+      `${incidentFiles.length} incidents pages are listed in _sidebar.md.`,
   );
 }
