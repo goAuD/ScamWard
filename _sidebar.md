@@ -2,7 +2,7 @@
 - [Glossary](/GLOSSARY.md)
 
 - **Guides**
-  - [Social Engineering Guide](/incidents/social_engineering_guide.md)
+  - [Social Engineering Guide](/docs/social_engineering_guide.md)
   - [CrowdSec Windows Guide](/docs/crowdsec_windows_guide.md)
 
 - **Incident Reports**
