@@ -4,7 +4,6 @@ import { dirname, extname, join, relative, resolve } from "node:path";
 const ROOT = process.cwd();
 const SKIP_DIRECTORIES = new Set([".git", ".sam", "node_modules"]);
 const MARKDOWN_LINK = /!?\[[^\]]*\]\(([^)]+)\)/g;
-const INCIDENT_REPORT_HEADING = /^# Incident Report(?:\s|$)/m;
 
 async function collectMarkdownFiles(directory) {
   const files = [];
@@ -93,14 +92,11 @@ for (const file of markdownFiles) {
 const incidentFiles = await collectMarkdownFiles(join(ROOT, "incidents"));
 
 for (const file of incidentFiles) {
-  const content = await readFile(file, "utf8");
-  if (!INCIDENT_REPORT_HEADING.test(content)) continue;
-
   const repositoryPath = relative(ROOT, file).replaceAll("\\", "/");
   const sidebarTarget = `/${repositoryPath}`;
   if (!sidebarTargets.has(sidebarTarget)) {
     failures.push(
-      `_sidebar.md: missing incident report link ${sidebarTarget}`,
+      `_sidebar.md: missing incidents page link ${sidebarTarget}`,
     );
   }
 }
@@ -110,6 +106,7 @@ if (failures.length > 0) {
   process.exitCode = 1;
 } else {
   console.log(
-    `Checked ${markdownFiles.length} Markdown files: local links resolve.`,
+    `Checked ${markdownFiles.length} Markdown files: local links resolve; ` +
+      `${incidentFiles.length} incidents pages are listed in _sidebar.md.`,
   );
 }
