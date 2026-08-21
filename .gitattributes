@@ -1,0 +1,34 @@
+# Normalize text in the repository while keeping binary assets untouched.
+* text=auto
+
+# Documentation and web source files use LF on every platform.
+*.md text eol=lf
+*.txt text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.js text eol=lf
+*.mjs text eol=lf
+*.json text eol=lf
+*.jsonc text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.xml text eol=lf
+*.svg text eol=lf
+
+# Extensionless repository metadata is also plain text.
+.editorconfig text eol=lf
+.gitattributes text eol=lf
+.gitignore text eol=lf
+.nojekyll text eol=lf
+LICENSE text eol=lf
+
+# Binary assets must never be line-ending normalized.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.pdf binary
