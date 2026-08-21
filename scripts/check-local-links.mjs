@@ -4,6 +4,7 @@ import { dirname, extname, join, relative, resolve } from "node:path";
 const ROOT = process.cwd();
 const SKIP_DIRECTORIES = new Set([".git", ".sam", "node_modules"]);
 const MARKDOWN_LINK = /!?\[[^\]]*\]\(([^)]+)\)/g;
+const INCIDENT_REPORT_HEADING = /^# Incident Report(?:\s|$)/m;
 
 async function collectMarkdownFiles(directory) {
   const files = [];
@@ -50,6 +51,12 @@ const GLOBAL_NAV_FILES = new Set(["_sidebar.md", "_navbar.md"]);
 
 const failures = [];
 const markdownFiles = await collectMarkdownFiles(ROOT);
+const sidebarContent = await readFile(join(ROOT, "_sidebar.md"), "utf8");
+const sidebarTargets = new Set(
+  [...sidebarContent.matchAll(MARKDOWN_LINK)].map((match) =>
+    normalizeTarget(match[1]),
+  ),
+);
 
 for (const file of markdownFiles) {
   const isGlobalNav = GLOBAL_NAV_FILES.has(relative(ROOT, file));
@@ -80,6 +87,21 @@ for (const file of markdownFiles) {
         `${relative(ROOT, file)}: missing local target ${rawTarget}`,
       );
     }
+  }
+}
+
+const incidentFiles = await collectMarkdownFiles(join(ROOT, "incidents"));
+
+for (const file of incidentFiles) {
+  const content = await readFile(file, "utf8");
+  if (!INCIDENT_REPORT_HEADING.test(content)) continue;
+
+  const repositoryPath = relative(ROOT, file).replaceAll("\\", "/");
+  const sidebarTarget = `/${repositoryPath}`;
+  if (!sidebarTargets.has(sidebarTarget)) {
+    failures.push(
+      `_sidebar.md: missing incident report link ${sidebarTarget}`,
+    );
   }
 }
 
